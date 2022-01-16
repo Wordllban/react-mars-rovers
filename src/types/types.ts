@@ -1,0 +1,1 @@
+export type date = Date | string; // format "yy-mm-dd"
