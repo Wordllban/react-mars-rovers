@@ -25,8 +25,10 @@ export const Rover = (props: RoverProps) => {
                     <p className='max-w-xl'>
                         {props.info}
                     </p>
-                    <details className='mt-2'>
-                        <summary className='mb-3'>More info</summary>
+                    <details className='mt-2 p-2 transition-all
+                        open:bg-cyan-600/10 rounded
+                    '>
+                        <summary className='mb-3 cursor-pointer max-w-[6rem]'>More info</summary>
                         <ul className='space-y-1'>
                             <li>Launch date: {props.launchDate}</li>
                             <li>Landing date: {props.landingDate}</li>
