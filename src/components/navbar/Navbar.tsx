@@ -4,7 +4,7 @@ import { NavbarItem } from './NavbarItem'
 
 export const Navbar = () => {
     return (
-       <header className='sticky top-0 backdrop-blur'>
+       <header className='sticky top-0 backdrop-blur z-10'>
            <div className='container mx-auto flex justify-between items-center py-2 border-b-2 border-gray-600/30'>
                 <Logo />
 
