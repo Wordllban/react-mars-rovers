@@ -1,7 +1,7 @@
 import { useEffect, useState} from 'react';
 import './App.css';
 import { Hero } from './components/hero/Hero';
-import { Navbar } from './components/navbar/Navbar';
+import { Header } from './components/navbar/Header';
 import { RoversSection } from './components/rovers/RoversSection';
 import { getRoverPhotos } from './services/api';
 
@@ -30,7 +30,7 @@ function App() {
   
   return (
     <div className=' bg-slate-900 text-white'>
-      <Navbar />
+      <Header />
       <Hero />
       <RoversSection /> 
     </div> 
