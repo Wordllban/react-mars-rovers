@@ -20,16 +20,16 @@ export const Select = () => {
                 <h2 className='text-4xl'>Select Rover</h2>
 
                 <div className='my-16 space-x-16'>
-                    <button name="curiosity" onClick={roverHandler} disabled={rover !== "curiosity" || "" ? false : true}
+                    <button name="curiosity" onClick={roverHandler} disabled={rover == "curiosity" ? true : false}
                         className='btn-rover'                    >
                         Curiosity
                     </button>
-                    <button name="opportunity" onClick={roverHandler} disabled={rover !== "opportunity" || "" ? false : true}  
+                    <button name="opportunity" onClick={roverHandler} disabled={rover == "opportunity" ? true : false}  
                         className='btn-rover'
                     >
                         Opportunity
                     </button>
-                    <button name="spirit" onClick={roverHandler} disabled={rover !== "spirit" || "" ? false : true}
+                    <button name="spirit" onClick={roverHandler} disabled={rover == "spirit" ? true : false}
                         className='btn-rover'
                     >
                         Spirit
