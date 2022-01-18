@@ -1,7 +1,7 @@
 import { useEffect, useState} from 'react';
 import './App.css';
 import { Hero } from './components/hero/Hero';
-import { Header } from './components/navbar/Header';
+import { Header } from './components/header/Header';
 import { RoversSection } from './components/rovers/RoversSection';
 import { getRoverPhotos } from './services/api';
 
