@@ -19,7 +19,7 @@ export const Rover = (props: RoverProps) => {
     return (
             <article className='text-white my-16 flex justify-between'>
                 <div className='px-20'>
-                    <h3 className='text-3xl mb-8'>
+                    <h3>
                         {props.name}
                     </h3>
                     <p className='max-w-xl'>
