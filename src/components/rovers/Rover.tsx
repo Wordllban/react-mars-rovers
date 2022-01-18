@@ -22,24 +22,24 @@ export const Rover = (props: RoverProps) => {
                     <h3 className='text-3xl mb-8'>
                         {props.name}
                     </h3>
-                    <p>
+                    <p className='max-w-xl'>
                         {props.info}
                     </p>
-                    <details className='mt-2'>
-                        <summary className='mb-3'>More info</summary>
+                    <details className='mt-2 p-2 transition-all
+                        open:bg-cyan-600/10 rounded
+                    '>
+                        <summary className='mb-3 cursor-pointer max-w-[6rem]'>More info</summary>
                         <ul className='space-y-1'>
                             <li>Launch date: {props.launchDate}</li>
                             <li>Landing date: {props.landingDate}</li>
                             <li className='flex items-center'>
                                 <a href={props.wikiURL}
-                                   className='text-sky-500'>
+                                   className='text-sky-500 hover:text-nasa-red'>
                                     Wikipedia
-                                </a>
-                                <div className='inline-block'>
                                     <img src={externalLink} alt="external link"
-                                         className='w-6 h-6'
+                                         className='inline-block w-6 h-6'
                                     />
-                                </div>
+                                </a>
                             </li>
                         </ul>
                     </details>
