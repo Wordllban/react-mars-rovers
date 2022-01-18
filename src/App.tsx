@@ -4,6 +4,7 @@ import { Hero } from './components/hero/Hero';
 import { Header } from './components/header/Header';
 import { RoversSection } from './components/rovers/RoversSection';
 import { getRoverPhotos } from './services/api';
+import { Select } from './components/select/Select';
 
 interface rawData {
   photos: []
@@ -33,6 +34,7 @@ function App() {
       <Header />
       <Hero />
       <RoversSection /> 
+      <Select />
     </div> 
   );
 }

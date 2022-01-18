@@ -19,11 +19,11 @@ export const Hero = () => {
                             px-28 py-2 text-xl font-bold z-50">
                             Try now
                         </a>
-                        <span className="before:transition-all before:duration-300 before:content-['']
+                        <span className="before:transition-all before:duration-500 before:content-['']
                             before:z-under before:w-0 before:h-0 before:absolute before:top-[-85%] before:left-[-35%]
                             before:border-t-[45px] before:border-r-[300px] before:border-r-transparent before:border-nasa-red/70
                             group-hover:before:z-10 group-hover:before:top-[-0.5rem] group-hover:before:left-[0.13rem]
-                            after:transition-all after:duration-300 after:content-['']
+                            after:transition-all after:duration-500 after:content-['']
                             after:z-under after:w-0 after:h-0 after:absolute after:bottom-[-85%] after:right-[-35%]
                             after:border-b-[45px] after:border-l-[300px] after:border-l-transparent after:border-nasa-blue/70
                             group-hover:after:z-10 group-hover:after:bottom-[-0.48rem] group-hover:after:right-[0.05rem]">
