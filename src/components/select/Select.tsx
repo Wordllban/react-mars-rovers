@@ -71,7 +71,7 @@ export const Select = () => {
                         <CameraItem cameraName="FHAZ" onClick={cameraHandler} disabled={camera === "FHAZ" ? true : false}/>
                         <CameraItem cameraName="RHAZ" onClick={cameraHandler} disabled={camera === "RHAZ" ? true : false}/>
                         <CameraItem cameraName="NAVCAM" onClick={cameraHandler} disabled={camera === "NAVCAM" ? true : false}/>
-                        { rover && rover === "curiosity"
+                        { rover && rover === "Curiosity"
                             ?
                             <>
                                 <CameraItem cameraName="MAST" onClick={cameraHandler} disabled={camera === "MAST" ? true : false}/>
@@ -86,6 +86,9 @@ export const Select = () => {
                             </>
                         }
                     </div>
+                </div>
+                <div>
+
                 </div>
             </div>
         </section>
