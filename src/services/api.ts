@@ -1,7 +1,7 @@
 import { sol } from './../types/types';
 import axios from 'axios';
 
-const apiKey: string = "rrQZZnkBYyJGmL8tIEFagUgeCqwYa6gYCvXaopHl"
+const apiKey: string = ""
 
 const http = axios.create({
     baseURL: 'https://api.nasa.gov/mars-photos/api/v1/rovers',
