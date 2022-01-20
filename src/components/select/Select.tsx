@@ -1,17 +1,28 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { getRoverPhotos } from '../../services/api';
 
 import { sol } from '../../types/types';
 import { CameraItem } from './CameraItem';
 import { RoverItem } from './RoverItem';
 
 export const Select = () => {
-    const [rover, setRover] = useState<string | null | undefined>("Curiosity");
-    const [sol, setSol] = useState<sol | undefined>(1000);
+    const [photos, setPhotos] = useState();
+    const [rover, setRover] = useState<string>("Curiosity");
+    const [sol, setSol] = useState<sol>(1000);
     const [camera, setCamera] = useState<string | null | undefined>();
+
+    useEffect(() => {
+        console.log(photos);
+    }, [photos])
+
+    const fetchPhotos = async (currentRover: string, currentSol: sol, currentCamera: string | null | undefined) => {
+        const newPhotos = await getRoverPhotos(currentRover, currentSol, currentCamera);
+        setPhotos(newPhotos.photos);
+    } 
 
     const roverHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
        const newRover = (event.target as HTMLButtonElement).getAttribute("name");
-       setRover(newRover);
+       if(newRover) setRover(newRover);
     }
 
     const solHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -87,8 +98,15 @@ export const Select = () => {
                         }
                     </div>
                 </div>
-                <div>
-
+                <div className='px-20'>
+                    <button className='btn mb-8' onClick={() => fetchPhotos(rover, sol, camera)}>
+                        Search Mars photos
+                    </button>
+                    <div className='grid grid-cols-4 gap-4'>
+                        {photos ? (photos as Array<{img_src: string}>).map((item) => <img src={item.img_src}/>)
+                        : <div className='text-nasa-red'>no photos found</div>    
+                    }
+                    </div>
                 </div>
             </div>
         </section>
