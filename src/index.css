@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-  .btn-rover {
+  .btn-select{
     @apply text-2xl border-2 rounded border-nasa-blue py-2 px-4 transition hover:bg-nasa-blue/60 disabled:border-green-400 disabled:bg-green-400/60;
   }
 }
