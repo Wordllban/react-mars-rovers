@@ -20,12 +20,7 @@ interface MarsPhotos {
 function App() {
   const [items, setItems] = useState<MarsPhotos[]>();
 
-  useEffect(() => {
-    setTimeout(async () => {
-     // let rawData: rawData = await getRoverPhotos("curiosity", "fhaz", "1000")
-     // setItems(rawData.photos)  
-    }, 300)
-  }, [])
+  
 
   console.log('items: ', items);
   
