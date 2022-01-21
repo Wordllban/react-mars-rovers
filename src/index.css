@@ -15,4 +15,8 @@
   h3 {
     @apply block text-3xl mb-4
   }
+  
+  h4 {
+    @apply text-xl
+  }
 }

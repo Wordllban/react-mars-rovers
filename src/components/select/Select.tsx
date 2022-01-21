@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { getRoverPhotos } from '../../services/api';
 
 import { sol } from '../../types/types';
@@ -6,14 +6,10 @@ import { CameraItem } from './CameraItem';
 import { RoverItem } from './RoverItem';
 
 export const Select = () => {
-    const [photos, setPhotos] = useState();
+    const [photos, setPhotos] = useState<[]>();
     const [rover, setRover] = useState<string>("Curiosity");
     const [sol, setSol] = useState<sol>(1000);
     const [camera, setCamera] = useState<string | null | undefined>();
-
-    useEffect(() => {
-        console.log(photos);
-    }, [photos])
 
     const fetchPhotos = async (currentRover: string, currentSol: sol, currentCamera: string | null | undefined) => {
         const newPhotos = await getRoverPhotos(currentRover, currentSol, currentCamera);
@@ -103,13 +99,12 @@ export const Select = () => {
                         Search Mars photos
                     </button>
                     <div className='grid grid-cols-4 gap-4'>
-                        {photos ? (photos as Array<{img_src: string}>).map((item) => <img src={item.img_src}/>)
+                        {photos && photos.length !== 0 ? (photos as Array<{img_src: string}>).map((item) => <img src={item.img_src} alt=""/>)
                         : <div className='text-nasa-red'>no photos found</div>    
                     }
-                    </div>
+                    </div> 
                 </div>
             </div>
         </section>
     )
 }
-

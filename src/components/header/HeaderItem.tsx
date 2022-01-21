@@ -1,9 +1,5 @@
 import React from 'react'
-
-interface NavItemProps {
-    name: string;
-    link: string;
-}
+import { NavItemProps } from '../../types/types'
 
 export const HeaderItem = (props: NavItemProps) => {
     return (

@@ -1,6 +1,7 @@
 body {
     overflow-x: hidden;
 }
+
 details[open] li{
  padding-left: 1rem;
 }
