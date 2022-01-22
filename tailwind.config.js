@@ -20,6 +20,9 @@ module.exports = {
       boxShadow: {
         cta: "0 0 25px #43bfff",
       },
+      backgroundImage: {
+        "footer-texture": "url('./assets/images/mars_footer.jpg')",
+      },
     },
   },
   plugins: [],
