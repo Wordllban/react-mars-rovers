@@ -41,7 +41,7 @@ export const Select = () => {
 
     return (
         <section className='py-8'>
-            <div className='container mx-auto'>
+            <div className='container mx-auto px-16'>
                 <h2 className='text-4xl'>Setup Photolist</h2>
 
                 <div className='my-12 px-20 max-w-4xl'>

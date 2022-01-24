@@ -18,7 +18,7 @@ interface RoverProps {
 export const Rover = (props: RoverProps) => {
     return (
             <article className='text-white my-16 flex justify-between'>
-                <div className='px-20'>
+                <div className='px-14'>
                     <h3>
                         {props.name}
                     </h3>

@@ -5,11 +5,11 @@ import { FooterItem } from './FooterItem';
 
 export const Footer = () => {
   return (
-    <footer className='pb-20 pt-8 bg-black/30 relative'>
-      <div className='container mx-auto flex justify-around'>
-        <div>
+    <footer className='pb-20 pt-8 bg-black/40 relative'>
+      <div className='container mx-auto flex justify-between px-16'>
+        <div className=''>
             <img src={marsPhoto} alt="" 
-              className='max-h-72 absolute bottom-[]'
+              className='max-h-72 rotate-180 absolute left-[-5%]'
             />
         </div>
         <div className=' flex justify-end text-lg'>
@@ -24,7 +24,7 @@ export const Footer = () => {
           </menu>
           </nav>
           <div>
-              <h4 className='mb-4 text-nasa-red'>Social media</h4>
+              <h4 className='mb-4 text-nasa-blue'>Social media</h4>
               <ul className='space-y-2'>
                 <FooterItem name="Facebook" link="#"/>
                 <FooterItem name="LinkedIn" link="#"/>

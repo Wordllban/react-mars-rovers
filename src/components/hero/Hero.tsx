@@ -4,7 +4,7 @@ import marsImage from "../../assets/images/mars.png"
 
 export const Hero = () => {
     return (
-        <section className='mb-64 flex justify-between relative'>
+        <section className='mb-64 flex justify-between relative px-16'>
             <div className='container mx-auto py-20' >
                 <div>
                     <h1 className='text-5xl font-semibold mb-10'>Discover Mars with NASA</h1>
@@ -16,7 +16,7 @@ export const Hero = () => {
                     <div className='relative group inline-block'>
                         <a href="#" className="relative transition border-2 border-l-nasa-red
                           border-t-nasa-red border-b-nasa-blue border-r-nasa-blue
-                            px-28 py-2 text-xl font-bold z-50">
+                            px-28 py-2 text-xl font-bold z-30">
                             Try now
                         </a>
                         <span className="before:transition-all before:duration-500 before:content-['']
@@ -33,7 +33,7 @@ export const Hero = () => {
                  
             </div>
             <div>
-                <img src={marsImage} alt="Mars" className='max-w-5xl max-h-4xl absolute top-[-55%] right-[-15%]'/>
+                <img src={marsImage} alt="Mars" className='max-w-5xl absolute top-[-55%] right-[-15%] lg:right-[-25%]'/>
             </div>
         </section>
     )

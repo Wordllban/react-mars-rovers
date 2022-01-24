@@ -18,7 +18,7 @@ export const RoversSection = () => {
 
     return (
         <section className='my-4'>
-            <div className='container mx-auto'>
+            <div className='container mx-auto px-16'>
                 <h2 className='text-4xl'>Mars Rovers</h2>
 
                 <Rover name="Curiosity" photo={curiosity} info={curiosityInfo} launchDate="2011-11-26"

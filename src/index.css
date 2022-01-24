@@ -12,6 +12,9 @@
 }
 
 @layer base {
+  body {
+    @apply overflow-x-hidden
+  }
   h3 {
     @apply block text-3xl mb-4
   }
