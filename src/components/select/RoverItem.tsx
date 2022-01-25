@@ -8,7 +8,7 @@ interface RoverProps {
 
 export const RoverItem = (props: RoverProps) => {
   return (
-    <button name={props.roverName} onClick={props.onClick} className='btn-select mr-16 last:mr-0' disabled={props.disabled}>
+    <button name={props.roverName} onClick={props.onClick} className='btn-select' disabled={props.disabled}>
         {props.roverName}
     </button>
   );

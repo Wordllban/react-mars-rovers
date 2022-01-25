@@ -18,8 +18,8 @@ export const RoversSection = () => {
 
     return (
         <section className='my-4'>
-            <div className='container mx-auto px-16'>
-                <h2 className='text-4xl'>Mars Rovers</h2>
+            <div className='container mx-auto '>
+                <h2>Mars Rovers</h2>
 
                 <Rover name="Curiosity" photo={curiosity} info={curiosityInfo} launchDate="2011-11-26"
                        landingDate="2012-08-06" wikiURL={curiosityWiki}/>
