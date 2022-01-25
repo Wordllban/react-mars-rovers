@@ -3,23 +3,36 @@
 @tailwind utilities;
 
 @layer components {
-  .btn-select{
+  .btn-select {
     @apply text-2xl border-2 rounded border-nasa-blue py-2 px-4 transition hover:bg-nasa-blue/60 disabled:border-green-400 disabled:bg-green-400/60;
   }
   .btn {
-    @apply text-2xl border-2 rounded border-nasa-red/70 py-2 px-4 transition hover:bg-nasa-red/40 focus:border-green-400 focus:bg-green-400/60
+    @apply text-2xl border-2 rounded border-nasa-red/70 py-2 px-4 transition hover:bg-nasa-red/40 focus:border-green-400 focus:bg-green-400/60;
   }
 }
 
 @layer base {
+  html {
+    @apply overflow-x-clip xl:text-[16px] md:text-[14px] text-[12px];
+  }
+
   body {
-    @apply overflow-x-hidden
+    @apply overflow-x-clip;
   }
+
+  section {
+    @apply px-16;
+  }
+
+  h2 {
+    @apply text-5xl;
+  }
+
   h3 {
-    @apply block text-3xl mb-4
+    @apply block text-4xl mb-4;
   }
-  
+
   h4 {
-    @apply text-xl font-bold
+    @apply text-xl font-bold;
   }
 }

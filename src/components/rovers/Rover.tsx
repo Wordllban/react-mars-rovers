@@ -17,18 +17,18 @@ interface RoverProps {
 
 export const Rover = (props: RoverProps) => {
     return (
-            <article className='text-white my-16 flex justify-between'>
-                <div className='px-14'>
+            <article className='text-white my-16 flex justify-between flex-col lg:flex-row'>
+                <div className='px-12'>
                     <h3>
                         {props.name}
                     </h3>
-                    <p className='max-w-xl'>
+                    <p className='max-w-xl text-xl'>
                         {props.info}
                     </p>
-                    <details className='mt-2 p-2 transition-all
-                        open:bg-cyan-600/10 rounded
+                    <details className='mt-2 mb-4 p-2 transition-all text-lg
+                        open:bg-cyan-600/10 rounded 
                     '>
-                        <summary className='mb-3 cursor-pointer max-w-[6rem]'>More info</summary>
+                        <summary className='mb-3 cursor-pointer max-w-[7rem]'>More info</summary>
                         <ul className='space-y-1'>
                             <li>Launch date: {props.launchDate}</li>
                             <li>Landing date: {props.landingDate}</li>
@@ -44,7 +44,9 @@ export const Rover = (props: RoverProps) => {
                         </ul>
                     </details>
                 </div>
-                <img src={props.photo} alt="rover" className='max-w-96 max-h-96 px-20'/>
+                <div>
+                    <img src={props.photo} alt="rover" className='max-w-96 max-h-96 px-12 mx-auto'/>
+                </div>
             </article> 
     )
 }
