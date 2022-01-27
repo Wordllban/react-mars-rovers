@@ -5,7 +5,9 @@ import marsImage from "../../assets/images/mars.png"
 
 export const Hero = () => {
     return (
-        <section id="about" className='mb-36 flex justify-between relative md:px-16'>
+        <section id="about" className='mb-36 flex justify-between relative md:px-16
+         after:content-[""] after:rotate-[-50deg] after:absolute after:right-[60%] after:top-[-70%] after:h-[50rem] after:w-[20rem]
+         after:blur-[85px] after:bg-gradient-to-r after:from-fuchsia-600/30 after:via-cyan-600/20 after:to-indigo-600/50'>
             <div className='container mx-auto py-20'>
                 <div>
                     <h1 className='relative text-5xl font-semibold mb-10 z-10  max-w-[16rem] lg:max-w-full'>Discover Mars <br /> with NASA</h1>

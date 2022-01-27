@@ -28,7 +28,6 @@ export const Select = () => {
     const fetchPhotos = async (currentRover: string, currentSol: sol, currentCamera: string | null | undefined) => {
         const newPhotos = await getRoverPhotos(currentRover, currentSol, currentCamera);
         setPhotos(newPhotos.photos);
-        console.log('photos found: ', photos?.length)
     } 
 
     const roverHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -55,7 +54,11 @@ export const Select = () => {
     }
 
     return (
-        <section id="app" className='pb-8'>
+        <section id="app" className='pb-8 relative before:content-[""] before:rotate-[-60deg] before:absolute
+         before:h-[36rem] before:w-[20rem] before:blur-[75px] before:bg-gradient-to-r
+         before:right-[-15%] before:lg:right-[-1%] before:bottom-[5%] before:lg:bottom-[10%]
+       before:from-fuchsia-600/70 before:via-cyan-600/30 before:to-indigo-600/70'>
+        
             <div className='container mx-auto'>
                 <h2 className='text-4xl'>Setup Photolist</h2>
 
@@ -111,6 +114,7 @@ export const Select = () => {
                                 </>
                             }
                             </div>
+                            <button className='block mt-10 md:mt-8 btn-select' onClick={() => setCamera(undefined)}>Unselect Camera</button>
                         </div>
                     </div>
                 <div className='md:px-12'>
