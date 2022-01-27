@@ -1,4 +1,6 @@
 import React from 'react';
+
+// types
 import { NavItemProps } from '../../types/types';
 
 export const FooterItem = (props: NavItemProps) => {

@@ -1,10 +1,12 @@
 import React from 'react'
-import logo from '../../assets/images/NASA_logo.svg'
+
+// images
+import logo from '../../assets/images/logo.png'
 
 export const Logo = () => {
     return (
         <>
-          <img src={logo} alt="NASA" className='lg:h-[6.5rem] md:h-[5.5rem] h-[5rem]' />  
+          <img src={logo} alt="Mars Rovers" className='lg:h-[6.5rem] md:h-[5.5rem] h-[5rem]' />  
         </>
     )
 }

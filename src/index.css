@@ -37,6 +37,6 @@
   }
 
   details[open] li {
-    @apply pl-4
-  } 
+    @apply pl-4;
+  }
 }

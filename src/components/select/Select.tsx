@@ -1,15 +1,29 @@
 import React, { useState } from 'react'
+
+// api
 import { getRoverPhotos } from '../../services/api';
 
+// types
 import { sol } from '../../types/types';
+
+// components
 import { CameraItem } from './CameraItem';
 import { RoverItem } from './RoverItem';
 
 export const Select = () => {
+    // pagination states
+    const [showMore, setShowMore] = useState<boolean>(false);
+    const [showMoreCount, setShowMoreCount] = useState<number>(9);
+
+    // filter states
     const [photos, setPhotos] = useState<[]>();
     const [rover, setRover] = useState<string>("Curiosity");
     const [sol, setSol] = useState<sol>(1000);
     const [camera, setCamera] = useState<string | null | undefined>();
+
+    const showMoreHandler = () => {
+        setShowMoreCount(showMoreCount + 9);
+    }
 
     const fetchPhotos = async (currentRover: string, currentSol: sol, currentCamera: string | null | undefined) => {
         const newPhotos = await getRoverPhotos(currentRover, currentSol, currentCamera);
@@ -40,8 +54,12 @@ export const Select = () => {
     }
 
     return (
-        <section id="app" className='pb-8'>
-            <div className='container mx-auto'>
+        <section id="app" className='pb-8 relative before:content-[""] before:rotate-[-60deg] before:absolute
+         before:h-[36rem] before:w-[20rem] before:blur-[75px] before:bg-gradient-to-r
+         before:right-[-15%] before:lg:right-[-1%] before:bottom-[5%] before:lg:bottom-[10%]
+       before:from-fuchsia-600/70 before:via-cyan-600/30 before:to-indigo-600/70'>
+        
+            <div className='container mx-auto relative z-10'>
                 <h2 className='text-4xl'>Setup Photolist</h2>
 
                 <div className='my-16 flex gap-[2rem] flex-auto flex-wrap justify-between align-center lg:mr-16'>
@@ -96,6 +114,7 @@ export const Select = () => {
                                 </>
                             }
                             </div>
+                            <button className='block mt-10 md:mt-8 btn-select' onClick={() => setCamera(undefined)}>Unselect Camera</button>
                         </div>
                     </div>
                 <div className='md:px-12'>
@@ -103,9 +122,15 @@ export const Select = () => {
                         Search Mars photos
                     </button>
                     <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 auto-cols-fr'>
-                        {photos && photos.length !== 0 ? (photos as Array<{img_src: string}>).map((item) => <img src={item.img_src} alt=""/>)
+                        {photos && photos.length !== 0 ? (photos.slice(0, showMoreCount) as Array<{img_src: string}>).map((item) => <img src={item.img_src} alt=""/>)
                         : <div className='text-nasa-red'>no photos found</div>    
                     }
+                    </div>
+                    <div className='mt-8 text-center'>
+                        { photos && (showMoreCount < photos?.length)
+                            && 
+                          <button className='btn' name="view more button" onClick={showMoreHandler}>View more</button>
+                        }    
                     </div> 
                 </div>
             </div>

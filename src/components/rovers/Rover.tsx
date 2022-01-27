@@ -25,7 +25,7 @@ export const Rover = (props: RoverProps) => {
                     <p className='max-w-xl text-xl'>
                         {props.info}
                     </p>
-                    <details className='my-3 p-2 transition-all text-lg
+                    <details className='my-3 p-2 transition-all text-lg open:shadow-xl open:shadow-cyan-500/10
                         open:bg-cyan-600/10 rounded 
                     '>
                         <summary className='mb-3 cursor-pointer max-w-[7rem]'>More info</summary>
@@ -44,8 +44,8 @@ export const Rover = (props: RoverProps) => {
                         </ul>
                     </details>
                 </div>
-                <div>
-                    <img src={props.photo} alt="rover" className='max-w-96 max-h-96 px-12 mx-auto'/>
+                <div className='px-12'>
+                    <img src={props.photo} alt="rover" className='mx-auto max-w-96 max-h-96 shadow-xl shadow-cyan-500/10'/>
                 </div>
             </article> 
     )
