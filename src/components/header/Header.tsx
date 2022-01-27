@@ -26,12 +26,12 @@ export const Header = () => {
     }
 
     return (
-       <header className='sticky top-0 z-50 px-16 lg:backdrop-blur bg-slate-900/80 lg:bg-transparent'>
-           <div className='container mx-auto flex justify-between items-center lg:py-2 lg:border-b-2 border-gray-600/30'>
+       <header className='sticky top-0 z-50 px-8 sm:px-16 lg:backdrop-blur bg-slate-900/80 lg:bg-transparent'>
+           <div className='container mx-auto flex justify-between items-center lg:border-b-2 border-gray-600/30'>
                 <Logo />
 
                 <button  onClick={() => setShowMenu(!showMenu)}
-                className='lg:hidden block absolute right-16 w-10 h-10 border-none bg-transparent z-[9999]'>
+                className='lg:hidden block absolute right-[3.5rem] w-10 h-10 border-none bg-transparent z-[9999]'>
                     <img src={ showMenu ? closeMenuButton : openMenuButton } alt="menu" className='m-auto'/>
                     <span className='sr-only'>Menu</span>
                 </button>
@@ -42,11 +42,11 @@ export const Header = () => {
                             fixed inset-0 bg-nasa-blue/30 backdrop-blur-[16px] gap-[8rem]
                             px-[8rem] lg:px-0 py-[2rem] lg:py-0 flex-col justify-center items-center text-center lg:space-x-[2rem] xl:space-x-[3rem]'
                 >
-                    <HeaderItem name="About" link="#"/>
-                    <HeaderItem name="Rovers" link="#"/>
-                    <HeaderItem name="Nasa API" link="#"/>
-                    <HeaderItem name="Github" link="#"/>
-                    <HeaderItem name="Contact me" link="#"/>
+                    <HeaderItem name="About" link="#about"/>
+                    <HeaderItem name="Rovers" link="#rovers"/>
+                    <HeaderItem name="Nasa API" link="https://api.nasa.gov"/>
+                    <HeaderItem name="Github" link="https://github.com/Wordllban/react-mars-rovers"/>
+                    <HeaderItem name="Contact me" link="https://www.linkedin.com/in/kostiantyn-mininkov-9869a4217/"/>
                 </nav>
            </div>
        </header> 

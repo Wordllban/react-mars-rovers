@@ -40,21 +40,21 @@ export const Select = () => {
     }
 
     return (
-        <section className='py-8'>
+        <section id="app" className='pb-8'>
             <div className='container mx-auto'>
                 <h2 className='text-4xl'>Setup Photolist</h2>
 
-                <div className='my-16 flex gap-[2rem] flex-auto flex-wrap justify-between align-center mr-16'>
-                    <div className='px-12'>
+                <div className='my-16 flex gap-[2rem] flex-auto flex-wrap justify-between align-center lg:mr-16'>
+                    <div className='md:px-12'>
                         <h3>Rovers</h3>
-                        <div className='flex gap-24'>
+                        <div className='flex gap-12 md:gap-24 flex-col sm:flex-row'>
                             <RoverItem roverName="Curiosity" onClick={roverHandler} disabled={rover === "Curiosity" ? true : false}/>
                             <RoverItem roverName="Opportunity" onClick={roverHandler} disabled={rover === "Opportunity" ? true : false}/>
                             <RoverItem roverName="Spirit" onClick={roverHandler} disabled={rover === "Spirit" ? true : false}/>
                         </div>
                     </div>
 
-                    <div className='px-12'>
+                    <div className='md:px-12'>
                         <h3>Sol</h3>
                         <p className='mb-4 text-lg'>
                             Sol is a day on Mars. For more details click 
@@ -66,7 +66,7 @@ export const Select = () => {
                         <p>Range: 1 to 3359</p>                  
                     </div>
 
-                    <div className='px-12'>
+                    <div className='md:px-12'>
                         <h3>Cameras</h3>
                         <p className='max-w-xl mb-4 text-lg'>
                            Each rover has its own cameras, and some of them are unique. 
@@ -77,7 +77,7 @@ export const Select = () => {
                          *  i beilive thats can me modified with Array.map()
                          *  but for now its hardcoded
                          */}
-                        <div className='grid gap-4 grid-cols-3 max-w-6xl'>
+                        <div className='grid gap-10 md:gap-8 grid-cols-2 md:grid-cols-3 max-w-6xl'>
                             <CameraItem cameraName="FHAZ" onClick={cameraHandler} disabled={camera === "FHAZ" ? true : false}/>
                             <CameraItem cameraName="RHAZ" onClick={cameraHandler} disabled={camera === "RHAZ" ? true : false}/>
                             <CameraItem cameraName="NAVCAM" onClick={cameraHandler} disabled={camera === "NAVCAM" ? true : false}/>
@@ -98,11 +98,11 @@ export const Select = () => {
                             </div>
                         </div>
                     </div>
-                <div className='px-12'>
+                <div className='md:px-12'>
                     <button className='btn mb-8' onClick={() => fetchPhotos(rover, sol, camera)}>
                         Search Mars photos
                     </button>
-                    <div className='grid grid-cols-4 gap-4'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 auto-cols-fr'>
                         {photos && photos.length !== 0 ? (photos as Array<{img_src: string}>).map((item) => <img src={item.img_src} alt=""/>)
                         : <div className='text-nasa-red'>no photos found</div>    
                     }
