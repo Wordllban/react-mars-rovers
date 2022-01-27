@@ -17,7 +17,7 @@ export const RoversSection = () => {
     const spiritWiki: string = "https://en.wikipedia.org/wiki/Spirit_(rover)"
 
     return (
-        <section className='my-4'>
+        <section id="rovers" className='mb-36'>
             <div className='container mx-auto '>
                 <h2>Mars Rovers</h2>
 

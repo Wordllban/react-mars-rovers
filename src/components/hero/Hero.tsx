@@ -4,8 +4,8 @@ import marsImage from "../../assets/images/mars.png"
 
 export const Hero = () => {
     return (
-        <section className='mb-64 flex justify-between relative px-16'>
-            <div className='container mx-auto py-20' >
+        <section id="about" className='mb-36 flex justify-between relative md:px-16'>
+            <div className='container mx-auto py-20'>
                 <div>
                     <h1 className='relative text-5xl font-semibold mb-10 z-10  max-w-[16rem] lg:max-w-full'>Discover Mars <br /> with NASA</h1>
                     <p className='relative text-2xl font-light mb-48 max-w-sm lg:max-w-lg z-10'>
@@ -14,7 +14,7 @@ export const Hero = () => {
                     </p>
 
                     <div className='relative group inline-block'>
-                        <a href="#" className="relative transition border-2 border-l-nasa-red
+                        <a href="#app" className="relative transition border-2 border-l-nasa-red
                           border-t-nasa-red border-b-nasa-blue border-r-nasa-blue
                             px-28 py-2 text-xl font-bold z-30">
                             Try now
@@ -33,7 +33,7 @@ export const Hero = () => {
                  
             </div>
             <div>
-                <img src={marsImage} alt="Mars" className='z-[1] max-w-3xl xl:max-w-5xl absolute top-[-45%] lg:top-[-55%] 2xl:right-[-15%] right-[-25%]'/>
+                <img src={marsImage} alt="Mars" className='z-[1] max-w-3xl xl:max-w-5xl absolute top-[-45%] lg:top-[-55%] 2xl:right-[-15%] sm:right-[-25%] right-[-85%]'/>
             </div>
         </section>
     )

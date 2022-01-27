@@ -17,15 +17,15 @@ interface RoverProps {
 
 export const Rover = (props: RoverProps) => {
     return (
-            <article className='text-white my-16 flex justify-between flex-col lg:flex-row'>
-                <div className='px-12'>
+            <article className='text-white my-16 flex justify-between flex-col lg:flex-row transition'>
+                <div className='px-6 sm:px-12'>
                     <h3>
                         {props.name}
                     </h3>
                     <p className='max-w-xl text-xl'>
                         {props.info}
                     </p>
-                    <details className='mt-2 mb-4 p-2 transition-all text-lg
+                    <details className='my-3 p-2 transition-all text-lg
                         open:bg-cyan-600/10 rounded 
                     '>
                         <summary className='mb-3 cursor-pointer max-w-[7rem]'>More info</summary>
