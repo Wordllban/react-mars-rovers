@@ -1,4 +1,6 @@
 import React from 'react'
+
+// images
 import logo from '../../assets/images/NASA_logo.svg'
 
 export const Logo = () => {

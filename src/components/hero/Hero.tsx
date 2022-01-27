@@ -1,5 +1,6 @@
 import React from 'react'
 
+// images
 import marsImage from "../../assets/images/mars.png"
 
 export const Hero = () => {

@@ -1,6 +1,9 @@
 import React from 'react';
+
+// images
 import marsPhoto from '../../assets/images/mars_footer.png'
 
+// components
 import { FooterItem } from './FooterItem';
 
 export const Footer = () => {

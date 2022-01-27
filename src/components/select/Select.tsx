@@ -1,19 +1,34 @@
 import React, { useState } from 'react'
+
+// api
 import { getRoverPhotos } from '../../services/api';
 
+// types
 import { sol } from '../../types/types';
+
+// components
 import { CameraItem } from './CameraItem';
 import { RoverItem } from './RoverItem';
 
 export const Select = () => {
+    // pagination states
+    const [showMore, setShowMore] = useState<boolean>(false);
+    const [showMoreCount, setShowMoreCount] = useState<number>(9);
+
+    // filter states
     const [photos, setPhotos] = useState<[]>();
     const [rover, setRover] = useState<string>("Curiosity");
     const [sol, setSol] = useState<sol>(1000);
     const [camera, setCamera] = useState<string | null | undefined>();
 
+    const showMoreHandler = () => {
+        setShowMoreCount(showMoreCount + 9);
+    }
+
     const fetchPhotos = async (currentRover: string, currentSol: sol, currentCamera: string | null | undefined) => {
         const newPhotos = await getRoverPhotos(currentRover, currentSol, currentCamera);
         setPhotos(newPhotos.photos);
+        console.log('photos found: ', photos?.length)
     } 
 
     const roverHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -103,9 +118,15 @@ export const Select = () => {
                         Search Mars photos
                     </button>
                     <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 auto-cols-fr'>
-                        {photos && photos.length !== 0 ? (photos as Array<{img_src: string}>).map((item) => <img src={item.img_src} alt=""/>)
+                        {photos && photos.length !== 0 ? (photos.slice(0, showMoreCount) as Array<{img_src: string}>).map((item) => <img src={item.img_src} alt=""/>)
                         : <div className='text-nasa-red'>no photos found</div>    
                     }
+                    </div>
+                    <div className='mt-8 text-center'>
+                        { photos && (showMoreCount < photos?.length)
+                            && 
+                          <button className='btn' name="view more button" onClick={showMoreHandler}>View more</button>
+                        }    
                     </div> 
                 </div>
             </div>
