@@ -11,7 +11,7 @@ import { Footer } from './components/footer/Footer';
 
 function App() {
   return (
-    <div className=' bg-slate-900 text-white touch-none'>
+    <div className=' bg-slate-900 text-white touch-pan-y'>
       <Header />
       <Hero />
       <RoversSection /> 
