@@ -9,7 +9,7 @@ export const Hero = () => {
          after:content-[""] after:rotate-[-50deg] after:absolute after:right-[60%] after:top-[-70%] after:h-[50rem] after:w-[20rem]
          after:blur-[85px] after:bg-gradient-to-r after:from-fuchsia-600/30 after:via-cyan-600/20 after:to-indigo-600/50 overflow-hidden'
     >
-      <div className="py-4">
+      <div className="mt-4 py-4 px-8">
         <div className="container mx-auto py-20">
           <div>
             <h1 className="relative text-5xl font-semibold mb-10 z-10  max-w-[16rem] lg:max-w-full">
