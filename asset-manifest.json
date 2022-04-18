@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-mars-rovers/static/css/main.e9a73bb5.css",
+    "main.js": "/react-mars-rovers/static/js/main.5302bde9.js",
+    "static/media/mars.png": "/react-mars-rovers/static/media/mars.248d95a25b8fb37c3352.png",
+    "static/media/opportunity_rover.jpg": "/react-mars-rovers/static/media/opportunity_rover.daeb4d30da3ccfdcd9c8.jpg",
+    "static/media/spirit_rover.jpg": "/react-mars-rovers/static/media/spirit_rover.3776378614a000956f6a.jpg",
+    "static/media/mars_footer.png": "/react-mars-rovers/static/media/mars_footer.ffc20600616b658dfe15.png",
+    "static/media/curiosity_rover.jpg": "/react-mars-rovers/static/media/curiosity_rover.aebf3676b09e304b1f40.jpg",
+    "static/media/logo.png": "/react-mars-rovers/static/media/logo.ae891427ecd15cf7fd65.png",
+    "static/media/mobile_menu_close.svg": "/react-mars-rovers/static/media/mobile_menu_close.80ea4032ccf1a41a4d138f0725e01e9c.svg",
+    "index.html": "/react-mars-rovers/index.html",
+    "static/media/external_link.svg": "/react-mars-rovers/static/media/external_link.9c725fab3b771ef1d497f11ebef8a3f0.svg",
+    "static/media/mobile_menu.svg": "/react-mars-rovers/static/media/mobile_menu.539e970b024b6b5d5c9e7a1c9aec380f.svg",
+    "main.e9a73bb5.css.map": "/react-mars-rovers/static/css/main.e9a73bb5.css.map",
+    "main.5302bde9.js.map": "/react-mars-rovers/static/js/main.5302bde9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e9a73bb5.css",
+    "static/js/main.5302bde9.js"
+  ]
+}
