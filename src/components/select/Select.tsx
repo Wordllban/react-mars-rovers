@@ -56,7 +56,7 @@ export const Select = () => {
         <section id="app" className='pb-8 relative before:content-[""] before:rotate-[-60deg] before:absolute
          before:h-[36rem] before:w-[20rem] before:blur-[75px] before:bg-gradient-to-r
          before:right-[-15%] before:lg:right-[-1%] before:bottom-[5%] before:lg:bottom-[10%]
-       before:from-fuchsia-600/70 before:via-cyan-600/30 before:to-indigo-600/70'>
+       before:from-fuchsia-600/70 before:via-cyan-600/30 before:to-indigo-600/70 overflow-hidden'>
         
             <div className='container mx-auto relative z-10'>
                 <h2 className='text-4xl'>Setup Photolist</h2>
