@@ -19,7 +19,7 @@ export const RoversSection = () => {
     return (
         <section id="rovers" className='mb-36 relative before:content-[""] before:rotate-[30deg] before:absolute
          before:h-[30rem] before:w-[14rem] before:blur-[75px] before:bg-gradient-to-r before:left-[-15%] before:lg:left-[-1%] before:bottom-[5%] before:lg:bottom-[35%]
-       before:from-fuchsia-600/50 before:via-cyan-600/20 before:to-indigo-600/50'>
+       before:from-fuchsia-600/50 before:via-cyan-600/20 before:to-indigo-600/50 overflow-hidden'>
             <div className='container mx-auto relative z-10'>
                 <h2>Mars Rovers</h2>
 
