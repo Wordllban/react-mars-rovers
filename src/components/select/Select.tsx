@@ -12,7 +12,6 @@ import { RoverItem } from './RoverItem';
 
 export const Select = () => {
     // pagination states
-    const [showMore, setShowMore] = useState<boolean>(false);
     const [showMoreCount, setShowMoreCount] = useState<number>(9);
 
     // filter states
@@ -92,7 +91,7 @@ export const Select = () => {
                            If you haven't choose the camera you will get photos from them all!
                         </p>
                         {/**
-                         *  i beilive thats can me modified with Array.map()
+                         *  i beilive thats can be modified with Array.map()
                          *  but for now its hardcoded
                          */}
                         <div className='grid gap-10 md:gap-8 grid-cols-2 md:grid-cols-3 max-w-6xl'>
@@ -124,7 +123,7 @@ export const Select = () => {
                     <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 auto-cols-fr'>
                         {photos && photos.length !== 0 ? (photos.slice(0, showMoreCount) as Array<{img_src: string}>).map((item) => <img src={item.img_src} alt=""/>)
                         : <div className='text-nasa-red'>no photos found</div>    
-                    }
+                        }
                     </div>
                     <div className='mt-8 text-center'>
                         { photos && (showMoreCount < photos?.length)
