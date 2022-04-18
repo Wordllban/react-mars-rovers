@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-mars-rovers/static/css/main.0a78f65b.css",
-    "main.js": "/react-mars-rovers/static/js/main.de61d96c.js",
+    "main.css": "/react-mars-rovers/static/css/main.c85ff5aa.css",
+    "main.js": "/react-mars-rovers/static/js/main.f2289736.js",
     "static/media/mars.png": "/react-mars-rovers/static/media/mars.248d95a25b8fb37c3352.png",
     "static/media/opportunity_rover.jpg": "/react-mars-rovers/static/media/opportunity_rover.daeb4d30da3ccfdcd9c8.jpg",
     "static/media/spirit_rover.jpg": "/react-mars-rovers/static/media/spirit_rover.3776378614a000956f6a.jpg",
@@ -12,11 +12,11 @@
     "index.html": "/react-mars-rovers/index.html",
     "static/media/external_link.svg": "/react-mars-rovers/static/media/external_link.9c725fab3b771ef1d497f11ebef8a3f0.svg",
     "static/media/mobile_menu.svg": "/react-mars-rovers/static/media/mobile_menu.539e970b024b6b5d5c9e7a1c9aec380f.svg",
-    "main.0a78f65b.css.map": "/react-mars-rovers/static/css/main.0a78f65b.css.map",
-    "main.de61d96c.js.map": "/react-mars-rovers/static/js/main.de61d96c.js.map"
+    "main.c85ff5aa.css.map": "/react-mars-rovers/static/css/main.c85ff5aa.css.map",
+    "main.f2289736.js.map": "/react-mars-rovers/static/js/main.f2289736.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a78f65b.css",
-    "static/js/main.de61d96c.js"
+    "static/css/main.c85ff5aa.css",
+    "static/js/main.f2289736.js"
   ]
 }
